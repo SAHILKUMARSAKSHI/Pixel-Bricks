@@ -14,9 +14,9 @@ const MembersInfo = () => {
       <div className="bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-white">Members Information</h1>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
-            Add New Member
-          </button>
+                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">
+             Add New Member
+           </button>
         </div>
 
         {/* Stats */}
@@ -82,10 +82,10 @@ const MembersInfo = () => {
                         {member.membership}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-blue-400 hover:text-blue-300 mr-3">Edit</button>
-                      <button className="text-red-400 hover:text-red-300">Delete</button>
-                    </td>
+                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                       <button className="text-blue-400 hover:text-blue-300 mr-3 cursor-pointer">Edit</button>
+                       <button className="text-red-400 hover:text-red-300 cursor-pointer">Delete</button>
+                     </td>
                   </tr>
                 ))}
               </tbody>

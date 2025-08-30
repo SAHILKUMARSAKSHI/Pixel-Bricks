@@ -47,12 +47,12 @@ const Notifications = () => {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-white">Notifications</h1>
           <div className="flex space-x-2">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
-              Mark All Read
-            </button>
-            <button className="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded-lg transition-colors duration-200">
-              Clear All
-            </button>
+                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">
+               Mark All Read
+             </button>
+             <button className="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">
+               Clear All
+             </button>
           </div>
         </div>
 
@@ -98,15 +98,15 @@ const Notifications = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mt-1">{notification.message}</p>
-                  <div className="flex items-center space-x-2 mt-3">
-                    <button className="text-blue-400 hover:text-blue-300 text-sm transition-colors duration-200">
-                      View Details
-                    </button>
-                    <span className="text-gray-500">•</span>
-                    <button className="text-gray-400 hover:text-gray-300 text-sm transition-colors duration-200">
-                      Mark as {notification.read ? 'unread' : 'read'}
-                    </button>
-                  </div>
+                                     <div className="flex items-center space-x-2 mt-3">
+                     <button className="text-blue-400 hover:text-blue-300 text-sm transition-colors duration-200 cursor-pointer">
+                       View Details
+                     </button>
+                     <span className="text-gray-500">•</span>
+                     <button className="text-gray-400 hover:text-gray-300 text-sm transition-colors duration-200 cursor-pointer">
+                       Mark as {notification.read ? 'unread' : 'read'}
+                     </button>
+                   </div>
                 </div>
               </div>
             </div>
@@ -114,11 +114,11 @@ const Notifications = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-8">
-          <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-200">
-            Load More Notifications
-          </button>
-        </div>
+                 <div className="text-center mt-8">
+           <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 cursor-pointer">
+             Load More Notifications
+           </button>
+         </div>
       </div>
     </div>
   );

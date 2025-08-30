@@ -14,9 +14,9 @@ const TrainerInfo = () => {
       <div className="bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-white">Trainer Information</h1>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
-            Add New Trainer
-          </button>
+                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">
+             Add New Trainer
+           </button>
         </div>
 
         {/* Stats */}
@@ -81,14 +81,14 @@ const TrainerInfo = () => {
                 </div>
               </div>
               
-              <div className="flex space-x-2">
-                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm transition-colors duration-200">
-                  View Profile
-                </button>
-                <button className="flex-1 bg-gray-600 hover:bg-gray-500 text-white px-3 py-2 rounded text-sm transition-colors duration-200">
-                  Contact
-                </button>
-              </div>
+                             <div className="flex space-x-2">
+                 <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm transition-colors duration-200 cursor-pointer">
+                   View Profile
+                 </button>
+                 <button className="flex-1 bg-gray-600 hover:bg-gray-500 text-white px-3 py-2 rounded text-sm transition-colors duration-200 cursor-pointer">
+                   Contact
+                 </button>
+               </div>
             </div>
           ))}
         </div>

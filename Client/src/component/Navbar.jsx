@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const activeTab = location.pathname.slice(1) || 'dashboard';
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard' },
@@ -30,10 +33,10 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item.id)}
-                                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform active:scale-95 hover:scale-105 ${
+                             <button
+                 key={item.id}
+                 onClick={() => navigate(`/${item.id}`)}
+                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform active:scale-95 hover:scale-105 cursor-pointer ${
                    activeTab === item.id
                      ? 'bg-blue-600 text-white border border-blue-500 shadow-sm'
                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
@@ -47,7 +50,7 @@ const Navbar = () => {
           {/* User Profile Section */}
           <div className="hidden md:flex items-center space-x-4">
                          {/* Notification Bell */}
-             <button className="relative p-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-all duration-200 transform active:scale-95 hover:scale-105">
+             <button className="relative p-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-all duration-200 transform active:scale-95 hover:scale-105 cursor-pointer">
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM10.5 3.75a6 6 0 0 1 6 6v3.75a2.25 2.25 0 0 0 4.5 0V9.75a6 6 0 0 0-12 0v3.75a2.25 2.25 0 0 0 4.5 0V9.75z" />
                </svg>
@@ -72,7 +75,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
                          <button
                onClick={() => setIsOpen(!isOpen)}
-               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 transform active:scale-95 hover:scale-105"
+               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 transform active:scale-95 hover:scale-105 cursor-pointer"
              >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -96,11 +99,11 @@ const Navbar = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => {
-                  setActiveTab(item.id);
-                  setIsOpen(false);
-                }}
-                                 className={`w-full text-left px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 transform active:scale-98 ${
+                                 onClick={() => {
+                   navigate(`/${item.id}`);
+                   setIsOpen(false);
+                 }}
+                                 className={`w-full text-left px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 transform active:scale-98 cursor-pointer ${
                    activeTab === item.id
                      ? 'bg-blue-600 text-white border border-blue-500'
                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
